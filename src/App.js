@@ -41,7 +41,7 @@ function HomePage(){
               setStatusData(res.data.status)
             })
             .catch((err)=>{
-              console.log(err)
+              //console.log(err)
             })
   }
 
