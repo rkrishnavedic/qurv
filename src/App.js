@@ -36,7 +36,7 @@ function HomePage(){
     if(userName === "" ) return
     axios.get(`https://codeforces.com/api/user.info?handles=${userName}`)
             .then( (res) =>{
-              console.log(res.data)
+              //console.log(res.data)
               setData(res.data.result[0])
               setStatusData(res.data.status)
             })
