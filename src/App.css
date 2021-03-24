@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+  text-shadow: whitesmoke;
+  background-color: #282c34;
+  text-size-adjust: 10%;
+  color: whitesmoke;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  height: 100%;
+  display: flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: right;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+.App-header >div{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container {
+  display: flex;
+  background-color: rgb(196, 187, 187);
+}
+
+.flex-container > div {
+  padding: 3%;
+  cursor: pointer;
+  flex-direction: row;
+  text-shadow: 0 0 5px #a4b8cf, 0 0 10px #96b9dd, 0 0 15px #8db7e0, 0 0 20px #bbd8f5, 0 0 25px #bbd8f5, 0 0 30px #bbd8f5, 0 0 35px #bbd8f5;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  font-family: 'Josefin Sans';
+}
+
+.playground {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  color: black;
+  font-family: 'Josefin Sans';
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
