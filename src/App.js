@@ -58,7 +58,7 @@ function HomePage(){
         <br/>
         Country: {data.country},  Contribution : {data.contribution}
         <br/>
-        Avatar: <img src={data.avatar}></img>
+        Avatar: <img alt="avatarImage" src={data.avatar}></img>
         <br/>
         Organisation: {data.organization}
       </div>
