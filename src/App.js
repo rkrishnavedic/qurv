@@ -1,6 +1,13 @@
 import axios from 'axios';
-import { useState } from 'react';
-import './App.css';
+import React, { useState } from 'react';
+import './App.css'
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import HomeIcon from '@material-ui/icons/Home';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 function AboutUs(){
   return (
@@ -29,6 +36,7 @@ function HomePage(){
   const [statusData, setStatusData] = useState("NAN");
 
   function codeforcesUsrNameHandler(event){
+    
     setUserName(event.target.value)
   }
 
@@ -41,7 +49,7 @@ function HomePage(){
               setStatusData(res.data.status)
             })
             .catch((err)=>{
-              //console.log(err)
+              console.log(err)
             })
   }
 
@@ -67,6 +75,7 @@ function HomePage(){
 
   return (
     <>
+    <HomeIcon/>
     <div style={{textAlign:"center"}} className="playground">
           Namaste!
           <p>
@@ -88,8 +97,18 @@ function HomePage(){
       Codeforces API Fetch
 
       <br/>
-      Enter the UserName <input onChange={codeforcesUsrNameHandler}></input>
-      <button onClick={userNameClickHandler} style={{background:"gray"}}> Fetch</button>
+      
+      Enter the UserName <TextField size="small" variant="outlined" onChange={codeforcesUsrNameHandler} label="handle"/>
+      
+    
+      <Button
+        variant="contained"
+        startIcon={<GetAppIcon color="primary"/>}
+        onClick={userNameClickHandler}
+        textColor="primary"
+      >
+        Fetch
+      </Button>
       <UserData/>
     </div>
 
@@ -115,10 +134,10 @@ Website Owner: Rahul Krishna
 }
 
 function Page({state}){
-  if(state === 1){
+  if(state === 5){
     return <AboutUs />
   }
-  if(state === 2){
+  if(state === 4){
     return <PracticePage />
   }
   return(
@@ -128,11 +147,7 @@ function Page({state}){
 
 function App() {
 
-  const [about, setAbout] = useState(0)
-
-  function onHomeClick(){
-    setAbout(0)
-  }
+  const [value, setValue] = useState(0)
 
   function cppOnClick(){
     window.open("https://www.geeksforgeeks.org/cpp-stl-tutorial/")
@@ -146,13 +161,11 @@ function App() {
     window.open("https://www.cp-algorithms.com")
   }
 
-  function practiceClick(){
-    //under construction
-    setAbout(2)
-  }
-  
-  function aboutUsClick(){
-    setAbout(1)
+  function handleTab(event, newValue){
+    if(newValue === 1) cppOnClick()
+    if(newValue === 2) basicAlgoClick()
+    if(newValue === 3) advanceAlgoClick()
+      setValue(newValue);
   }
 
   return (
@@ -160,16 +173,18 @@ function App() {
       <div style={{align:'center'}} className="App-header">
         Qurv
       </div>
-      <div className="flex-container">
-          <div onClick={onHomeClick} id="home">Home</div>
-          <div onClick={cppOnClick} id="cstl">C++ STL</div>
-          <div onClick={basicAlgoClick} id="balgo">Basic Algorithms</div>
-          <div onClick={advanceAlgoClick} id="aalog">Advance Algorithms</div>
-          <div onClick={practiceClick} id="pp">Practice Problems</div>
-          <div onClick={aboutUsClick} id="au">About us</div>
-      </div>
-
-      <Page state={about} />
+      <Paper square>
+      <Tabs value={value} onChange={handleTab} indicatorColor="secondary" textColor="secondary">
+      <Tab id="home" label="Home"/>
+          <Tab id="cstl" label="C++ STL"/>
+          <Tab id="balgo" label="Basic Algorithms"/>
+          <Tab id="aalog" label="Advance Algorithms"/>
+          <Tab id="pp" label="Practice Problems"/>
+          <Tab id="au" label="About us"/>
+      </Tabs>
+      </Paper>
+      
+      <Page state={value} />
 
    </>
   );
