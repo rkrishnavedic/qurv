@@ -13,7 +13,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 function HomePage(){
-  
+
+ 
     const [userName, setUserName] = useState("");
     const [data, setData] = useState([]);
     const [statusData, setStatusData] = useState("NAN");
@@ -136,7 +137,7 @@ function HomePage(){
               Namaste!
               <p>
                 We at Qurv aim to provide you a better interview preparation with coding Problems
-                <br/>Let us start practice together!
+                <br/>Let's practice together!
               </p>
             </div>
     

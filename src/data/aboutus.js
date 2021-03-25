@@ -4,10 +4,7 @@ function AboutUs(){
     return (
       <>
       <div style={{ fontFamily :"Josefin Sans",textAlign: "center",paddingTop: "10%"}}>
-        We are some students who aim for helping students for coding interview preparations!
-        <p>
-          Sole purpose is to help and maintain this website.
-        </p>
+        We are Prefinal year students who aim for helping students for coding interview preparations!
         <p>
           Let's Crack Coding Interview Problems Together!
         </p>
