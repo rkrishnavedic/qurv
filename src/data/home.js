@@ -11,6 +11,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import HomeIllustration from './ill.svg'
 
 function HomePage(){
 
@@ -134,14 +135,20 @@ function HomePage(){
         <div style={{overflow: "scroll"}}>
         <HomeIcon/>
         <div style={{textAlign:"center"}} className="playground">
+          <div>
               Namaste!
               <p>
                 We at Qurv aim to provide you a better interview preparation with coding Problems
                 <br/>Let's practice together!
+                
               </p>
+              </div>
+              <div>
+              <img width="100%" src={HomeIllustration} alt="HomeIllustration"/>
+              </div>
             </div>
     
-        <div style={{fontSize: "150%",fontFamily:"Indie Flower"}}>
+        <div style={{fontSize: "150%",fontFamily:"Flamenco"}}>
           <ul>
             <li>C++ STL: It is very handy when you are giving your online coding tests.</li>
             <li>You need atleast full knowledge of Basic Algorithms that are asked in Interviews.</li>

@@ -1,9 +1,11 @@
 import React from 'react';
+import CppIllustration from './cppstl.svg'
 
 function CppStl(){
     return (
     <>
-    <div style={{paddingLeft:"10px", fontFamily:"Pangolin"}}>
+    <div className="playground2">
+    <div style={{paddingLeft:"10px",fontSize:"130%", fontFamily:"Flamenco"}}>
         Under Progress....
         <ol>
             <li>What is STL?</li>
@@ -17,6 +19,10 @@ function CppStl(){
             <li>*struct</li>
             <li>*classes and its uses</li>
         </ol>
+    </div>
+    <div>
+        <img src={CppIllustration} width="100%" alt="CppIll" />
+    </div>
     </div>
     </>
     )
