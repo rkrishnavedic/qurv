@@ -59,10 +59,32 @@
 
 .playground {
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
   color: black;
-  font-family: 'Josefin Sans';
+  font-family: 'Flamenco';
+  font-size: 160%;
+}
+
+.playground2 {
+  position: relative;
+  flex-direction: row;
+  display: flex;
+  color: black;
+  font-family: 'Flamenco';
+}
+
+@media only screen and (max-width: 650px){
+  .playground{
+    flex-direction: column;
+  }
+  
+}
+@media only screen and (max-width: 650px){
+  .playground2{
+    flex-direction: column;
+  }
+  
 }
 
 .App-link {
@@ -93,3 +115,4 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Pangolin');
 @import url('https://fonts.googleapis.com/css?family=Syne+Mono');
+@import url('https://fonts.googleapis.com/css?family=Flamenco');

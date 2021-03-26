@@ -63,7 +63,7 @@ function NavigationBar({mobileDevice}){
   if(mobileDevice){
     return (
       <div style={{paddingTop:"50px", paddingLeft:"50px"}}>
-      <AppBar style={{opacity: 0.9, background:"#aeaeae", backdropFilter: "blur(4px)"}}>
+      <AppBar className="glassyMenu" style={{opacity: 0.9, background:"whitesmoke", backdropFilter: "blur(4px)"}}>
       
       <Tabs onChange={handleTab} indicatorColor="secondary" textColor="secondary">
           <Tab label="Qurv" style={{background:"#444444",color:"white", fontSize:"120%",fontFamily:"sans-serif", textTransform:"none"}} disabled/>
@@ -98,7 +98,7 @@ function NavigationBar({mobileDevice}){
 
   return (
     <div style={{paddingTop:"50px", paddingLeft:"50px"}}>
-    <AppBar style={{opacity: 0.9, background:"#dfdfdf", backdropFilter: "blur(4px)"}}>
+    <AppBar className="glassyMenu" style={{opacity: 0.9, background:"whitesmoke", backdropFilter: "blur(4px)"}}>
       
       <Tabs className="AppBar" value={value} onChange={handleTab} indicatorColor="secondary" textColor="secondary">
           <Tab label="Qurv" style={{background:"#444444",color:"white", fontSize:"120%",fontFamily:"sans-serif", textTransform:"none"}} disabled/>
