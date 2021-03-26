@@ -127,9 +127,9 @@ function PracticePage(){
     <div style={{ fontFamily: "Josefin Sans", textAlign: "center",paddingTop: "10%"}}>
       Page Under Construction ....
     </div>
-    <div className="footer">
+    {/*<div className="footer">
 Website Owner: Rahul Krishna
-</div>
+</div>*/}
     </>
   )
 }
