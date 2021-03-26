@@ -17,9 +17,9 @@ function AboutUs(){
       </div>
       </div>
 
-//       <div className="footer">
-//         Website Owner: Rahul Krishna
-//       </div>
+        {/*<div className="footer">
+        Website Owner: Rahul Krishna
+      </div>*/}
       </>
     )
   }
